@@ -1,0 +1,1317 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "category": "programiranje",
+      "difficulty": 1,
+      "text": "Šta znači skraćenica HTML?",
+      "options": [
+        "High Text Machine Language",
+        "HyperText Markup Language",
+        "HyperTransfer Markup Language",
+        "Hyper Tool Markup Language"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 2,
+      "category": "programiranje",
+      "difficulty": 1,
+      "text": "Koji HTTP metod se obično koristi za čitanje resursa?",
+      "options": [
+        "DELETE",
+        "PUT",
+        "GET",
+        "POST"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 3,
+      "category": "programiranje",
+      "difficulty": 1,
+      "text": "Koji HTTP status kod znači \"Not Found\"?",
+      "options": [
+        "301",
+        "404",
+        "500",
+        "200"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 4,
+      "category": "programiranje",
+      "difficulty": 1,
+      "text": "Koja kompanija je razvila programski jezik C#?",
+      "options": [
+        "Microsoft",
+        "Apple",
+        "Google",
+        "Oracle"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 5,
+      "category": "programiranje",
+      "difficulty": 1,
+      "text": "Koji operator u C# služi za poređenje jednakosti dve vrednosti?",
+      "options": [
+        ":=",
+        "=>",
+        "=",
+        "=="
+      ],
+      "correct": 3
+    },
+    {
+      "id": 6,
+      "category": "programiranje",
+      "difficulty": 1,
+      "text": "Šta je JSON?",
+      "options": [
+        "Programski jezik",
+        "Baza podataka",
+        "Operativni sistem",
+        "Tekstualni format za razmenu podataka"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 7,
+      "category": "programiranje",
+      "difficulty": 2,
+      "text": "Koja struktura podataka radi po principu LIFO (poslednji unet, prvi izlazi)?",
+      "options": [
+        "Stek",
+        "Red",
+        "Heš tabela",
+        "Binarno stablo"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 8,
+      "category": "programiranje",
+      "difficulty": 2,
+      "text": "Šta radi komanda git commit?",
+      "options": [
+        "Briše repozitorijum",
+        "Čuva izmene u lokalnoj istoriji repozitorijuma",
+        "Šalje izmene na udaljeni server",
+        "Preuzima izmene sa servera"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 9,
+      "category": "programiranje",
+      "difficulty": 2,
+      "text": "Koja je vremenska složenost binarne pretrage nad sortiranim nizom?",
+      "options": [
+        "O(n)",
+        "O(log n)",
+        "O(1)",
+        "O(n²)"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 10,
+      "category": "programiranje",
+      "difficulty": 2,
+      "text": "Koja je popularna .NET biblioteka za rad sa Redisom?",
+      "options": [
+        "Dapper",
+        "StackExchange.Redis",
+        "Entity Framework",
+        "Newtonsoft.Json"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 11,
+      "category": "programiranje",
+      "difficulty": 2,
+      "text": "Koji HTTP status kod označava da je resurs uspešno kreiran?",
+      "options": [
+        "200",
+        "201",
+        "301",
+        "204"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 12,
+      "category": "programiranje",
+      "difficulty": 2,
+      "text": "Šta ispisuje C# izraz Console.WriteLine(7 / 2)?",
+      "options": [
+        "3",
+        "4",
+        "3.0",
+        "3.5"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 13,
+      "category": "programiranje",
+      "difficulty": 3,
+      "text": "Kolika je vrednost izraza 0.1 + 0.2 == 0.3 u C# kada se koristi tip double?",
+      "options": [
+        "Greška pri kompajliranju",
+        "Izuzetak u toku izvršavanja",
+        "true",
+        "false"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 14,
+      "category": "programiranje",
+      "difficulty": 3,
+      "text": "Koja je vremenska složenost najgoreg slučaja algoritma Quick Sort?",
+      "options": [
+        "O(log n)",
+        "O(n²)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 15,
+      "category": "programiranje",
+      "difficulty": 3,
+      "text": "Koji od navedenih HTTP metoda NIJE idempotentan?",
+      "options": [
+        "POST",
+        "GET",
+        "PUT",
+        "DELETE"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 16,
+      "category": "programiranje",
+      "difficulty": 3,
+      "text": "Koja od navedenih konstrukcija u C# je tip vrednosti (value type)?",
+      "options": [
+        "class",
+        "string[]",
+        "struct",
+        "interface"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 17,
+      "category": "baze",
+      "difficulty": 1,
+      "text": "Šta znači skraćenica SQL?",
+      "options": [
+        "Simple Query Logic",
+        "Standard Question Language",
+        "Structured Query Language",
+        "Sequential Query List"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 18,
+      "category": "baze",
+      "difficulty": 1,
+      "text": "Koja SQL naredba služi za čitanje podataka iz tabele?",
+      "options": [
+        "DROP",
+        "SELECT",
+        "INSERT",
+        "UPDATE"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 19,
+      "category": "baze",
+      "difficulty": 1,
+      "text": "Šta je primarni ključ u relacionoj bazi?",
+      "options": [
+        "Kolona (ili skup kolona) koja jedinstveno identifikuje red",
+        "Naziv tabele",
+        "Indeks nad svim kolonama",
+        "Kolona u kojoj se čuvaju lozinke"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 20,
+      "category": "baze",
+      "difficulty": 1,
+      "text": "Koja od navedenih baza je graf baza podataka?",
+      "options": [
+        "InfluxDB",
+        "Neo4j",
+        "MySQL",
+        "Redis"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 21,
+      "category": "baze",
+      "difficulty": 1,
+      "text": "Koja SQL klauzula spaja redove iz dve tabele na osnovu povezane kolone?",
+      "options": [
+        "UNION",
+        "HAVING",
+        "GROUP BY",
+        "JOIN"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 22,
+      "category": "baze",
+      "difficulty": 2,
+      "text": "Koja Redis struktura podataka je najprirodnija za rang listu?",
+      "options": [
+        "String",
+        "Sorted set",
+        "List",
+        "Hash"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 23,
+      "category": "baze",
+      "difficulty": 2,
+      "text": "Koja Redis komanda uvećava brojač za 1?",
+      "options": [
+        "PLUS",
+        "ADD",
+        "INCR",
+        "RAISE"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 24,
+      "category": "baze",
+      "difficulty": 2,
+      "text": "Kako se zove jezik za upite u bazi Neo4j?",
+      "options": [
+        "T-SQL",
+        "CQL",
+        "Cypher",
+        "PL/SQL"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 25,
+      "category": "baze",
+      "difficulty": 2,
+      "text": "Šta znači ACID u kontekstu transakcija?",
+      "options": [
+        "Atomicity, Consistency, Isolation, Durability",
+        "Access, Control, Integrity, Durability",
+        "Availability, Consistency, Integrity, Distribution",
+        "Atomicity, Concurrency, Isolation, Delivery"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 26,
+      "category": "baze",
+      "difficulty": 2,
+      "text": "Koja od navedenih baza čuva podatke kao dokumente sličnog JSON-u?",
+      "options": [
+        "MongoDB",
+        "Redis",
+        "InfluxDB",
+        "Neo4j"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 27,
+      "category": "baze",
+      "difficulty": 2,
+      "text": "Čemu služi TTL u Redisu?",
+      "options": [
+        "Broji koliko puta je ključ pročitan",
+        "Određuje maksimalnu veličinu vrednosti",
+        "Određuje koliko dugo ključ postoji pre nego što se sam obriše",
+        "Šifruje ključ"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 28,
+      "category": "baze",
+      "difficulty": 2,
+      "text": "Koja Redis struktura je pogodna za čuvanje objekta sa više polja (npr. korisnik sa imenom i emailom)?",
+      "options": [
+        "List",
+        "Sorted set",
+        "HyperLogLog",
+        "Hash"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 29,
+      "category": "baze",
+      "difficulty": 3,
+      "text": "Koja Redis komanda atomično uklanja i vraća nasumičan element iz skupa (set)?",
+      "options": [
+        "SPOP",
+        "SMOVE",
+        "SREM",
+        "SRANDMEMBER"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 30,
+      "category": "baze",
+      "difficulty": 3,
+      "text": "Šta znači slovo P u CAP teoremi?",
+      "options": [
+        "Persistence",
+        "Performance",
+        "Parallelism",
+        "Partition tolerance"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 31,
+      "category": "baze",
+      "difficulty": 3,
+      "text": "Koji nivo izolacije transakcija sprečava \"dirty read\", ali dozvoljava \"non-repeatable read\"?",
+      "options": [
+        "Read Committed",
+        "Read Uncommitted",
+        "Serializable",
+        "Repeatable Read"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 32,
+      "category": "baze",
+      "difficulty": 3,
+      "text": "Koji deo primarnog ključa u Cassandri određuje na kom čvoru se red čuva?",
+      "options": [
+        "Partition key",
+        "Clustering key",
+        "Secondary index",
+        "Foreign key"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 33,
+      "category": "glavni gradovi",
+      "difficulty": 1,
+      "text": "Koji je glavni grad Japana?",
+      "options": [
+        "Kjoto",
+        "Tokio",
+        "Osaka",
+        "Nagoja"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 34,
+      "category": "glavni gradovi",
+      "difficulty": 1,
+      "text": "Koji je glavni grad Egipta?",
+      "options": [
+        "Kairo",
+        "Asuan",
+        "Aleksandrija",
+        "Luksor"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 35,
+      "category": "glavni gradovi",
+      "difficulty": 1,
+      "text": "Koji je glavni grad Norveške?",
+      "options": [
+        "Trondhajm",
+        "Bergen",
+        "Oslo",
+        "Stokholm"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 36,
+      "category": "glavni gradovi",
+      "difficulty": 1,
+      "text": "Koji je glavni grad Mađarske?",
+      "options": [
+        "Debrecin",
+        "Beč",
+        "Segedin",
+        "Budimpešta"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 37,
+      "category": "glavni gradovi",
+      "difficulty": 1,
+      "text": "Koji je glavni grad Italije?",
+      "options": [
+        "Milano",
+        "Rim",
+        "Venecija",
+        "Napulj"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 38,
+      "category": "glavni gradovi",
+      "difficulty": 2,
+      "text": "Koji je glavni grad Australije?",
+      "options": [
+        "Kanbera",
+        "Melburn",
+        "Sidnej",
+        "Brizbejn"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 39,
+      "category": "glavni gradovi",
+      "difficulty": 2,
+      "text": "Koji je glavni grad Kanade?",
+      "options": [
+        "Otava",
+        "Vankuver",
+        "Toronto",
+        "Montreal"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 40,
+      "category": "glavni gradovi",
+      "difficulty": 2,
+      "text": "Koji je glavni grad Brazila?",
+      "options": [
+        "Brazilija",
+        "Rio de Žaneiro",
+        "Sao Paulo",
+        "Salvador"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 41,
+      "category": "glavni gradovi",
+      "difficulty": 2,
+      "text": "Koji je glavni grad Turske?",
+      "options": [
+        "Istanbul",
+        "Ankara",
+        "Bursa",
+        "Izmir"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 42,
+      "category": "glavni gradovi",
+      "difficulty": 2,
+      "text": "Koji je glavni grad Švajcarske?",
+      "options": [
+        "Ženeva",
+        "Cirih",
+        "Bern",
+        "Bazel"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 43,
+      "category": "glavni gradovi",
+      "difficulty": 2,
+      "text": "Koji je glavni grad Novog Zelanda?",
+      "options": [
+        "Okland",
+        "Krajstčerč",
+        "Velington",
+        "Hamilton"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 44,
+      "category": "glavni gradovi",
+      "difficulty": 2,
+      "text": "Koji je glavni grad Maroka?",
+      "options": [
+        "Fes",
+        "Marakeš",
+        "Rabat",
+        "Kazablanka"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 45,
+      "category": "glavni gradovi",
+      "difficulty": 3,
+      "text": "Koji je glavni grad Kazahstana?",
+      "options": [
+        "Almati",
+        "Taškent",
+        "Astana",
+        "Biškek"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 46,
+      "category": "glavni gradovi",
+      "difficulty": 3,
+      "text": "Koji je glavni grad Nigerije?",
+      "options": [
+        "Lagos",
+        "Kano",
+        "Ibadan",
+        "Abudža"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 47,
+      "category": "glavni gradovi",
+      "difficulty": 3,
+      "text": "Koji je glavni grad Butana?",
+      "options": [
+        "Katmandu",
+        "Daka",
+        "Kolombo",
+        "Timpu"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 48,
+      "category": "glavni gradovi",
+      "difficulty": 3,
+      "text": "Koji je zvanični glavni grad Tanzanije?",
+      "options": [
+        "Dar es Salam",
+        "Najrobi",
+        "Dodoma",
+        "Zanzibar"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 49,
+      "category": "istorija",
+      "difficulty": 1,
+      "text": "Koje godine je počeo Prvi svetski rat?",
+      "options": [
+        "1939.",
+        "1914.",
+        "1912.",
+        "1918."
+      ],
+      "correct": 1
+    },
+    {
+      "id": 50,
+      "category": "istorija",
+      "difficulty": 1,
+      "text": "Koje godine je završen Drugi svetski rat u Evropi?",
+      "options": [
+        "1948.",
+        "1944.",
+        "1945.",
+        "1941."
+      ],
+      "correct": 2
+    },
+    {
+      "id": 51,
+      "category": "istorija",
+      "difficulty": 1,
+      "text": "Ko je bio prvi predsednik Sjedinjenih Američkih Država?",
+      "options": [
+        "Džon Adams",
+        "Abraham Linkoln",
+        "Tomas Džefreson",
+        "Džordž Vašington"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 52,
+      "category": "istorija",
+      "difficulty": 1,
+      "text": "Ko je predvodio Prvi srpski ustanak?",
+      "options": [
+        "Karađorđe Petrović",
+        "Vuk Karadžić",
+        "Miloš Obrenović",
+        "Petar II Petrović Njegoš"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 53,
+      "category": "istorija",
+      "difficulty": 1,
+      "text": "Koje godine je Kristofer Kolumbo stigao u Ameriku?",
+      "options": [
+        "1492.",
+        "1453.",
+        "1517.",
+        "1607."
+      ],
+      "correct": 0
+    },
+    {
+      "id": 54,
+      "category": "istorija",
+      "difficulty": 1,
+      "text": "Ko je u Sarajevu 1914. ubio Franca Ferdinanda?",
+      "options": [
+        "Nedeljko Čabrinović",
+        "Gavrilo Princip",
+        "Trifko Grabež",
+        "Danilo Ilić"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 55,
+      "category": "istorija",
+      "difficulty": 2,
+      "text": "Koje godine je pao Berlinski zid?",
+      "options": [
+        "1985.",
+        "1979.",
+        "1989.",
+        "1991."
+      ],
+      "correct": 2
+    },
+    {
+      "id": 56,
+      "category": "istorija",
+      "difficulty": 2,
+      "text": "Koje godine se odigrala Kosovska bitka?",
+      "options": [
+        "1521.",
+        "1453.",
+        "1389.",
+        "1204."
+      ],
+      "correct": 2
+    },
+    {
+      "id": 57,
+      "category": "istorija",
+      "difficulty": 2,
+      "text": "Koje godine je počeo Prvi srpski ustanak?",
+      "options": [
+        "1804.",
+        "1789.",
+        "1815.",
+        "1830."
+      ],
+      "correct": 0
+    },
+    {
+      "id": 58,
+      "category": "istorija",
+      "difficulty": 2,
+      "text": "Ko je bio prvi kralj Kraljevine Srba, Hrvata i Slovenaca?",
+      "options": [
+        "Nikola I Petrović",
+        "Petar I Karađorđević",
+        "Milan Obrenović",
+        "Aleksandar I Karađorđević"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 59,
+      "category": "istorija",
+      "difficulty": 2,
+      "text": "Koje godine je počela Francuska revolucija?",
+      "options": [
+        "1804.",
+        "1848.",
+        "1789.",
+        "1776."
+      ],
+      "correct": 2
+    },
+    {
+      "id": 60,
+      "category": "istorija",
+      "difficulty": 2,
+      "text": "Ko je bio srpski knez u vreme Kosovske bitke?",
+      "options": [
+        "Knez Lazar Hrebeljanović",
+        "Đurađ Branković",
+        "Stefan Lazarević",
+        "Stefan Dušan"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 61,
+      "category": "istorija",
+      "difficulty": 2,
+      "text": "Koje godine je Carigrad pao u ruke Osmanlija?",
+      "options": [
+        "1389.",
+        "1492.",
+        "1526.",
+        "1453."
+      ],
+      "correct": 3
+    },
+    {
+      "id": 62,
+      "category": "istorija",
+      "difficulty": 3,
+      "text": "Koje godine je potpisan Versajski mirovni ugovor?",
+      "options": [
+        "1919.",
+        "1918.",
+        "1920.",
+        "1921."
+      ],
+      "correct": 0
+    },
+    {
+      "id": 63,
+      "category": "istorija",
+      "difficulty": 3,
+      "text": "Na kom kongresu je 1878. priznata nezavisnost Srbije?",
+      "options": [
+        "Londonska konferencija",
+        "Berlinski kongres",
+        "Bečki kongres",
+        "Pariski mir"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 64,
+      "category": "istorija",
+      "difficulty": 3,
+      "text": "Koje godine je pala Smederevska tvrđava, a sa njom i Srpska despotovina?",
+      "options": [
+        "1389.",
+        "1453.",
+        "1521.",
+        "1459."
+      ],
+      "correct": 3
+    },
+    {
+      "id": 65,
+      "category": "istorija",
+      "difficulty": 3,
+      "text": "Koji mir je 1648. okončao Tridesetogodišnji rat?",
+      "options": [
+        "Bečki mir",
+        "Vestfalski mir",
+        "Utrehtski mir",
+        "Versajski mir"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 66,
+      "category": "nauka",
+      "difficulty": 1,
+      "text": "Koji je hemijski simbol za zlato?",
+      "options": [
+        "Go",
+        "Ag",
+        "Zl",
+        "Au"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 67,
+      "category": "nauka",
+      "difficulty": 1,
+      "text": "Koja je najveća planeta Sunčevog sistema?",
+      "options": [
+        "Zemlja",
+        "Jupiter",
+        "Saturn",
+        "Neptun"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 68,
+      "category": "nauka",
+      "difficulty": 1,
+      "text": "Koja je hemijska formula vode?",
+      "options": [
+        "O2",
+        "H2O",
+        "CO2",
+        "NaCl"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 69,
+      "category": "nauka",
+      "difficulty": 1,
+      "text": "Ko je postavio teoriju relativnosti?",
+      "options": [
+        "Albert Ajnštajn",
+        "Stiven Hoking",
+        "Isak Njutn",
+        "Nikola Tesla"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 70,
+      "category": "nauka",
+      "difficulty": 1,
+      "text": "Koja je zvezda najbliža Zemlji?",
+      "options": [
+        "Proksima Kentauri",
+        "Sirijus",
+        "Polarna zvezda",
+        "Sunce"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 71,
+      "category": "nauka",
+      "difficulty": 1,
+      "text": "Koji hemijski element ima atomski broj 1?",
+      "options": [
+        "Ugljenik",
+        "Helijum",
+        "Vodonik",
+        "Kiseonik"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 72,
+      "category": "nauka",
+      "difficulty": 1,
+      "text": "Koliko planeta ima Sunčev sistem?",
+      "options": [
+        "8",
+        "10",
+        "9",
+        "7"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 73,
+      "category": "nauka",
+      "difficulty": 2,
+      "text": "Koji gas biljke uzimaju iz vazduha tokom fotosinteze?",
+      "options": [
+        "Kiseonik",
+        "Vodonik",
+        "Ugljen-dioksid",
+        "Azot"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 74,
+      "category": "nauka",
+      "difficulty": 2,
+      "text": "Koliko je približno brzina svetlosti u vakuumu?",
+      "options": [
+        "300.000 km/s",
+        "3.000.000 km/s",
+        "30.000 km/s",
+        "3.000 km/s"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 75,
+      "category": "nauka",
+      "difficulty": 2,
+      "text": "Koliko kostiju ima odrastao čovek?",
+      "options": [
+        "206",
+        "312",
+        "106",
+        "256"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 76,
+      "category": "nauka",
+      "difficulty": 2,
+      "text": "Koji organ proizvodi insulin?",
+      "options": [
+        "Jetra",
+        "Bubreg",
+        "Gušterača (pankreas)",
+        "Slezina"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 77,
+      "category": "nauka",
+      "difficulty": 2,
+      "text": "Koji je hemijski simbol za natrijum?",
+      "options": [
+        "N",
+        "So",
+        "Nt",
+        "Na"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 78,
+      "category": "nauka",
+      "difficulty": 2,
+      "text": "Koji gas čini najveći deo Zemljine atmosfere?",
+      "options": [
+        "Kiseonik",
+        "Azot",
+        "Argon",
+        "Ugljen-dioksid"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 79,
+      "category": "nauka",
+      "difficulty": 2,
+      "text": "Koliko hromozoma ima normalna ljudska telesna ćelija?",
+      "options": [
+        "23",
+        "48",
+        "46",
+        "44"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 80,
+      "category": "nauka",
+      "difficulty": 3,
+      "text": "Koji je hemijski simbol za volfram?",
+      "options": [
+        "V",
+        "Wo",
+        "W",
+        "Tu"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 81,
+      "category": "nauka",
+      "difficulty": 3,
+      "text": "Koliko iznosi Avogadrov broj (približno)?",
+      "options": [
+        "6,022 × 10²³",
+        "9,81 × 10²³",
+        "3,141 × 10²³",
+        "6,022 × 10²⁰"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 82,
+      "category": "nauka",
+      "difficulty": 3,
+      "text": "Koji gas čini najveći deo atmosfere Marsa?",
+      "options": [
+        "Metan",
+        "Azot",
+        "Ugljen-dioksid",
+        "Kiseonik"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 83,
+      "category": "nauka",
+      "difficulty": 3,
+      "text": "Koja vrsta elektromagnetnog zračenja ima najveću energiju?",
+      "options": [
+        "Ultraljubičasto zračenje",
+        "Gama zraci",
+        "Rendgenski zraci",
+        "Infracrveno zračenje"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 84,
+      "category": "opšta kultura",
+      "difficulty": 1,
+      "text": "Ko je naslikao Mona Lizu?",
+      "options": [
+        "Mikelanđelo",
+        "Leonardo da Vinči",
+        "Pablo Pikaso",
+        "Rafael"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 85,
+      "category": "opšta kultura",
+      "difficulty": 1,
+      "text": "Koliko igrača jedne ekipe je istovremeno na terenu u fudbalu?",
+      "options": [
+        "9",
+        "11",
+        "10",
+        "12"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 86,
+      "category": "opšta kultura",
+      "difficulty": 1,
+      "text": "Koji je najviši planinski vrh na svetu?",
+      "options": [
+        "Kilimandžaro",
+        "K2",
+        "Mon Blan",
+        "Mont Everest"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 87,
+      "category": "opšta kultura",
+      "difficulty": 1,
+      "text": "Kojim sportom se bavi Novak Đoković?",
+      "options": [
+        "Stoni tenis",
+        "Golf",
+        "Badminton",
+        "Tenis"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 88,
+      "category": "opšta kultura",
+      "difficulty": 1,
+      "text": "U kom gradu se nalazi Ajfelova kula?",
+      "options": [
+        "London",
+        "Rim",
+        "Pariz",
+        "Madrid"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 89,
+      "category": "opšta kultura",
+      "difficulty": 1,
+      "text": "Ko je napisao dramu \"Hamlet\"?",
+      "options": [
+        "Čarls Dikens",
+        "Gete",
+        "Vilijam Šekspir",
+        "Molijer"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 90,
+      "category": "opšta kultura",
+      "difficulty": 1,
+      "text": "Koliko traje regularni deo fudbalske utakmice (bez produžetaka)?",
+      "options": [
+        "60 minuta",
+        "90 minuta",
+        "100 minuta",
+        "80 minuta"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 91,
+      "category": "opšta kultura",
+      "difficulty": 2,
+      "text": "Koja reka se uliva u Dunav kod Beograda?",
+      "options": [
+        "Tisa",
+        "Sava",
+        "Drina",
+        "Morava"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 92,
+      "category": "opšta kultura",
+      "difficulty": 2,
+      "text": "Koji je najveći okean na svetu?",
+      "options": [
+        "Severni ledeni okean",
+        "Atlantski okean",
+        "Tihi okean",
+        "Indijski okean"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 93,
+      "category": "opšta kultura",
+      "difficulty": 2,
+      "text": "Ko je napisao roman \"Na Drini ćuprija\"?",
+      "options": [
+        "Ivo Andrić",
+        "Branko Ćopić",
+        "Miloš Crnjanski",
+        "Meša Selimović"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 94,
+      "category": "opšta kultura",
+      "difficulty": 2,
+      "text": "Ko je napisao \"Gorski vijenac\"?",
+      "options": [
+        "Branko Radičević",
+        "Petar II Petrović Njegoš",
+        "Jovan Jovanović Zmaj",
+        "Laza Kostić"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 95,
+      "category": "opšta kultura",
+      "difficulty": 2,
+      "text": "U kojoj zemlji su održane prve moderne Olimpijske igre 1896. godine?",
+      "options": [
+        "Grčka",
+        "Francuska",
+        "Sjedinjene Američke Države",
+        "Engleska"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 96,
+      "category": "opšta kultura",
+      "difficulty": 2,
+      "text": "Koja reprezentacija je osvojila najviše titula svetskog prvaka u fudbalu?",
+      "options": [
+        "Argentina",
+        "Nemačka",
+        "Brazil",
+        "Italija"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 97,
+      "category": "opšta kultura",
+      "difficulty": 2,
+      "text": "Ko je napisao roman \"Don Kihot\"?",
+      "options": [
+        "Horhe Luis Borhes",
+        "Migel de Servantes",
+        "Federiko Garsija Lorka",
+        "Lope de Vega"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 98,
+      "category": "opšta kultura",
+      "difficulty": 3,
+      "text": "Koja država ima najviše vremenskih zona (računajući i prekomorske teritorije)?",
+      "options": [
+        "Sjedinjene Američke Države",
+        "Velika Britanija",
+        "Rusija",
+        "Francuska"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 99,
+      "category": "opšta kultura",
+      "difficulty": 3,
+      "text": "Kako se zove najdublja tačka svetskih okeana?",
+      "options": [
+        "Portorikanski rov",
+        "Javanski rov",
+        "Tongin rov",
+        "Marijanski rov"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 100,
+      "category": "opšta kultura",
+      "difficulty": 3,
+      "text": "U kom gradu se nalazi muzej Ermitaž?",
+      "options": [
+        "Sankt Peterburg",
+        "Moskva",
+        "Kijev",
+        "Varšava"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 101,
+      "category": "opšta kultura",
+      "difficulty": 3,
+      "text": "Koja država ima najviše stanovnika u Africi?",
+      "options": [
+        "Južna Afrika",
+        "Etiopija",
+        "Nigerija",
+        "Egipat"
+      ],
+      "correct": 2
+    }
+  ]
+}
