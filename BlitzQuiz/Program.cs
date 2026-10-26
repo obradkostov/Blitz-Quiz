@@ -9,7 +9,8 @@ builder.Services.AddControllers();
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-
+var mux = await ConnectionMultiplexer.ConnectAsync(builder.Configuration["Redis:Connection"]!);
+builder.Services.AddSingleton<IConnectionMultiplexer>(mux);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -23,9 +24,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-var mux = await StackExchange.Redis.ConnectionMultiplexer.ConnectAsync(
-    builder.Configuration["Redis:Connection"]!
-);
+
 Console.WriteLine("PING: " + await mux.GetDatabase().PingAsync());
 var json = await File.ReadAllTextAsync(
     Path.Combine(builder.Environment.ContentRootPath, "Data", "questions.json")
