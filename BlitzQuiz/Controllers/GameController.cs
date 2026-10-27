@@ -85,6 +85,7 @@ public class GameController : ControllerBase
         var isCorrect = req.Answer == correct;
         var points = isCorrect ? difficulty * 10 + (int)remaining.Value.TotalSeconds : 0;
         var total = await _db.SortedSetIncrementAsync($"game:{id}:leaderboard", req.Player, points);
+        await _db.SortedSetIncrementAsync("leaderboard:global", req.Player, points);
         await _db.KeyExpireAsync($"game:{id}:leaderboard", GameTtl);
 
         return Ok(
@@ -103,6 +104,18 @@ public class GameController : ControllerBase
     {
         var top = await _db.SortedSetRangeByRankWithScoresAsync(
             $"game:{id}:leaderboard",
+            0,
+            9,
+            Order.Descending
+        );
+        return Ok(top.Select(e => new { player = e.Element.ToString(), score = e.Score }));
+    }
+
+    [HttpGet("~/api/leaderboard")]
+    public async Task<IActionResult> GlobalLeaderboard()
+    {
+        var top = await _db.SortedSetRangeByRankWithScoresAsync(
+            "leaderboard:global",
             0,
             9,
             Order.Descending

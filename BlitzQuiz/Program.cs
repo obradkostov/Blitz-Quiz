@@ -22,7 +22,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
+app.UseDefaultFiles();
+app.UseStaticFiles();
 app.MapControllers();
 
 Console.WriteLine("PING: " + await mux.GetDatabase().PingAsync());
@@ -48,7 +49,7 @@ foreach (var q in file.Questions)
             new("d", q.Options[3]),
             new("correct", q.Correct),
             new("category", q.Category),
-            new("difficulty", q.Difficulty)
+            new("difficulty", q.Difficulty),
         }
     );
     await db.SetAddAsync("questions:all", q.Id);

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blitz Quiz</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Blitz Quiz</h1>
+
+  <div id="start">
+    <p id="final"></p>
+    <input id="playerName" placeholder="Tvoje ime">
+    <button id="startBtn">Počni partiju</button>
+  </div>
+
+  <div id="game" class="hidden">
+    <div id="timer"></div>
+    <div id="meta"></div>
+    <h2 id="qtext"></h2>
+    <div id="options"></div>
+    <p id="result"></p>
+    <button id="nextBtn" class="hidden">Sledeće pitanje</button>
+  </div>
+
+  <h3>Top 10</h3>
+  <table id="board"></table>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
