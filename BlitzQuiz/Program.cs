@@ -11,6 +11,8 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 var mux = await ConnectionMultiplexer.ConnectAsync(builder.Configuration["Redis:Connection"]!);
 builder.Services.AddSingleton<IConnectionMultiplexer>(mux);
+builder.Services.AddSignalR();
+builder.Services.AddHostedService<FeedRelay>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -25,7 +27,7 @@ app.UseAuthorization();
 app.UseDefaultFiles();
 app.UseStaticFiles();
 app.MapControllers();
-
+app.MapHub<FeedHub>("/hub/feed");
 Console.WriteLine("PING: " + await mux.GetDatabase().PingAsync());
 var json = await File.ReadAllTextAsync(
     Path.Combine(builder.Environment.ContentRootPath, "Data", "questions.json")

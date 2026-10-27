@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using StackExchange.Redis;
 
@@ -8,8 +9,13 @@ public class GameController : ControllerBase
     private readonly IDatabase _db;
     private const int QuestionSeconds = 15;
     private static readonly TimeSpan GameTtl = TimeSpan.FromHours(2);
+    private readonly IConnectionMultiplexer _mux;
 
-    public GameController(IConnectionMultiplexer mux) => _db = mux.GetDatabase();
+    public GameController(IConnectionMultiplexer mux)
+    {
+        _mux = mux;
+        _db = mux.GetDatabase();
+    }
 
     [HttpPost]
     public async Task<IActionResult> Create()
@@ -34,7 +40,10 @@ public class GameController : ControllerBase
         var round = await _db.StringIncrementAsync($"game:{id}:round");
         await _db.KeyExpireAsync($"game:{id}:round", GameTtl);
         if (round > 10)
+        {
+            await PublishFinishAsync(id);
             return Ok(new { finished = true });
+        }
 
         var difficulty =
             round <= 4 ? 1
