@@ -13,6 +13,7 @@ var mux = await ConnectionMultiplexer.ConnectAsync(builder.Configuration["Redis:
 builder.Services.AddSingleton<IConnectionMultiplexer>(mux);
 builder.Services.AddSignalR();
 builder.Services.AddHostedService<FeedRelay>();
+builder.Services.AddHostedService<BotService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -94,8 +94,7 @@ public class GameController : ControllerBase
         var isCorrect = req.Answer == correct;
         var points = isCorrect ? difficulty * 10 + (int)remaining.Value.TotalSeconds : 0;
         var total = await _db.SortedSetIncrementAsync($"game:{id}:leaderboard", req.Player, points);
-        await _db.SortedSetIncrementAsync("leaderboard:global", req.Player, points);
-        await _db.KeyExpireAsync($"game:{id}:leaderboard", GameTtl);
+        await _db.SortedSetAddAsync("leaderboard:best", req.Player, total, SortedSetWhen.GreaterThan);        await _db.KeyExpireAsync($"game:{id}:leaderboard", GameTtl);
 
         return Ok(
             new
@@ -124,12 +123,34 @@ public class GameController : ControllerBase
     public async Task<IActionResult> GlobalLeaderboard()
     {
         var top = await _db.SortedSetRangeByRankWithScoresAsync(
-            "leaderboard:global",
+            "leaderboard:best",
             0,
             9,
             Order.Descending
         );
         return Ok(top.Select(e => new { player = e.Element.ToString(), score = e.Score }));
+    }
+
+    private async Task PublishFinishAsync(string id)
+    {
+        // SET NX: poruka se šalje samo jednom po partiji
+        var first = await _db.StringSetAsync($"game:{id}:published", 1, GameTtl, When.NotExists);
+        if (!first)
+            return;
+
+        var top = await _db.SortedSetRangeByRankWithScoresAsync(
+            $"game:{id}:leaderboard",
+            0,
+            0,
+            Order.Descending
+        );
+        if (top.Length == 0)
+            return;
+
+        var msg = JsonSerializer.Serialize(
+            new { player = top[0].Element.ToString(), score = top[0].Score }
+        );
+        await _mux.GetSubscriber().PublishAsync(RedisChannel.Literal("quiz:events"), msg);
     }
 }
 
