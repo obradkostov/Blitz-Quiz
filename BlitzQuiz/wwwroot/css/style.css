@@ -244,3 +244,22 @@ tr.empty td {
     border-bottom: 1px solid var(--border);
     color: var(--muted);
 }
+
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.tab {
+    width: auto;
+    margin: 0;
+    padding: 6px 12px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.tab.active {
+    background: var(--accent);
+    border-color: var(--accent);
+}

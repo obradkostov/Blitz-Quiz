@@ -32,7 +32,10 @@ public class BotService : BackgroundService
 
         for (var round = 1; round <= 10; round++)
         {
-            var difficulty = round <= 4 ? 1 : round <= 8 ? 2 : 3;
+            var difficulty =
+                round <= 4 ? 1
+                : round <= 8 ? 2
+                : 3;
             var think = _rnd.Next(1, maxThink + 1);
             await Task.Delay(TimeSpan.FromSeconds(think), ct);
 
@@ -42,7 +45,10 @@ public class BotService : BackgroundService
         }
 
         var db = _mux.GetDatabase();
-await db.SortedSetAddAsync("leaderboard:best", name, score, SortedSetWhen.GreaterThan);
+        await db.SortedSetAddAsync("leaderboard:best", name, score, SortedSetWhen.GreaterThan);
+        var dayKey = $"leaderboard:day:{DateTime.UtcNow:yyyyMMdd}";
+        await db.SortedSetAddAsync(dayKey, name, score, SortedSetWhen.GreaterThan);
+        await db.KeyExpireAsync(dayKey, TimeSpan.FromHours(48));
         var msg = JsonSerializer.Serialize(new { player = name, score });
         await _mux.GetSubscriber().PublishAsync(RedisChannel.Literal("quiz:events"), msg);
     }

@@ -1,6 +1,7 @@
 const $ = id => document.getElementById(id);
 
 let gameId, player, qId, timerId;
+let period = "all";
 let total = 0;
 let answered = false;
 
@@ -24,7 +25,11 @@ async function startGame() {
         return;
     }
 
-    const r = await api("/api/game", "POST");
+    const r = await api("/api/game", "POST", { player });
+    if (!r.ok) {
+        $("nameError").textContent = r.data.error || "Greška";
+        return;
+    }
     gameId = r.data.gameId;
     total = 0;
 
@@ -149,7 +154,7 @@ function finish() {
 
 // ---------- Rang lista ----------
 async function loadBoard() {
-    const r = await api("/api/leaderboard");
+    const r = await api("/api/leaderboard?period=" + period);
     const board = $("board");
     board.innerHTML = "";
 
@@ -195,3 +200,11 @@ connection.on("gameFinished", json => {
 });
 
 connection.start().catch(console.error);
+function setPeriod(p) {
+    period = p;
+    $("tabAll").classList.toggle("active", p === "all");
+    $("tabDay").classList.toggle("active", p === "day");
+    loadBoard();
+}
+$("tabAll").onclick = () => setPeriod("all");
+$("tabDay").onclick = () => setPeriod("day");

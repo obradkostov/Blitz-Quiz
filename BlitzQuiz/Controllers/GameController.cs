@@ -20,6 +20,20 @@ public class GameController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Create()
     {
+        var player = req.Player?.Trim();
+        if (string.IsNullOrEmpty(player) || player.Length > 20)
+            return BadRequest(new { error = "Ime mora imati od 1 do 20 znakova." });
+
+        // najviše 5 novih partija u minuti po igraču
+        var rateKey = $"rate:newgame:{player.ToLowerInvariant()}";
+        var count = await _db.StringIncrementAsync(rateKey);
+        if (count == 1)
+            await _db.KeyExpireAsync(rateKey, TimeSpan.FromMinutes(1));
+        if (count > 5)
+            return StatusCode(
+                429,
+                new { error = "Previše partija zaredom. Pokušaj ponovo za minut." }
+            );
         var id = Guid.NewGuid().ToString("N")[..8];
         foreach (var d in new[] { 1, 2, 3 })
         {
@@ -94,7 +108,14 @@ public class GameController : ControllerBase
         var isCorrect = req.Answer == correct;
         var points = isCorrect ? difficulty * 10 + (int)remaining.Value.TotalSeconds : 0;
         var total = await _db.SortedSetIncrementAsync($"game:{id}:leaderboard", req.Player, points);
-        await _db.SortedSetAddAsync("leaderboard:best", req.Player, total, SortedSetWhen.GreaterThan);        await _db.KeyExpireAsync($"game:{id}:leaderboard", GameTtl);
+        await _db.SortedSetAddAsync(
+            "leaderboard:best",
+            req.Player,
+            total,
+            SortedSetWhen.GreaterThan
+        );
+
+        await _db.KeyExpireAsync($"game:{id}:leaderboard", GameTtl);
 
         return Ok(
             new
@@ -120,14 +141,14 @@ public class GameController : ControllerBase
     }
 
     [HttpGet("~/api/leaderboard")]
-    public async Task<IActionResult> GlobalLeaderboard()
+    public async Task<IActionResult> GlobalLeaderboard([FromQuery] string period = "all")
     {
-        var top = await _db.SortedSetRangeByRankWithScoresAsync(
-            "leaderboard:best",
-            0,
-            9,
-            Order.Descending
-        );
+        var key =
+            period == "day" ? $"leaderboard:day:{DateTime.UtcNow:yyyyMMdd}" : "leaderboard:best";
+        var dayKey = $"leaderboard:day:{DateTime.UtcNow:yyyyMMdd}";
+        await _db.SortedSetAddAsync(dayKey, req.Player, total, SortedSetWhen.GreaterThan);
+        await _db.KeyExpireAsync(dayKey, TimeSpan.FromHours(48));
+        var top = await _db.SortedSetRangeByRankWithScoresAsync(key, 0, 9, Order.Descending);
         return Ok(top.Select(e => new { player = e.Element.ToString(), score = e.Score }));
     }
 
@@ -155,3 +176,5 @@ public class GameController : ControllerBase
 }
 
 public record AnswerRequest(string Player, int QuestionId, int Answer);
+
+public record CreateRequest(string Player);
