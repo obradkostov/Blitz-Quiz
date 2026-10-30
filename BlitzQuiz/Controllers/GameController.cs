@@ -18,7 +18,7 @@ public class GameController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create()
+    public async Task<IActionResult> Create([FromBody] CreateRequest req)
     {
         var player = req.Player?.Trim();
         if (string.IsNullOrEmpty(player) || player.Length > 20)
@@ -114,7 +114,9 @@ public class GameController : ControllerBase
             total,
             SortedSetWhen.GreaterThan
         );
-
+        var dayKey = $"leaderboard:day:{DateTime.UtcNow:yyyyMMdd}";
+        await _db.SortedSetAddAsync(dayKey, req.Player, total, SortedSetWhen.GreaterThan);
+        await _db.KeyExpireAsync(dayKey, TimeSpan.FromHours(48));
         await _db.KeyExpireAsync($"game:{id}:leaderboard", GameTtl);
 
         return Ok(
@@ -145,9 +147,7 @@ public class GameController : ControllerBase
     {
         var key =
             period == "day" ? $"leaderboard:day:{DateTime.UtcNow:yyyyMMdd}" : "leaderboard:best";
-        var dayKey = $"leaderboard:day:{DateTime.UtcNow:yyyyMMdd}";
-        await _db.SortedSetAddAsync(dayKey, req.Player, total, SortedSetWhen.GreaterThan);
-        await _db.KeyExpireAsync(dayKey, TimeSpan.FromHours(48));
+
         var top = await _db.SortedSetRangeByRankWithScoresAsync(key, 0, 9, Order.Descending);
         return Ok(top.Select(e => new { player = e.Element.ToString(), score = e.Score }));
     }
