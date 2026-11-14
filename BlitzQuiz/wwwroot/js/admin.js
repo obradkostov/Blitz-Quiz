@@ -39,7 +39,8 @@ async function openQuestion(id) {
 function clearForm() {
   editingId = null;
   $("formTitle").textContent = "Novo pitanje";
-  document.querySelectorAll("#text, .opt, #category").forEach(el => (el.value = ""));
+  document.querySelectorAll("#text, .opt").forEach(el => (el.value = ""));
+  $("category").selectedIndex = 0;
   $("del").classList.add("hidden");
 }
 

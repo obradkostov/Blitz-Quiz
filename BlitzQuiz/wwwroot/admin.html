@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html lang="sr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Administracija pitanja</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <main class="app">
-    <h1>Administracija pitanja</h1>
-    <div class="start-grid">
-      <section class="card">
-        <h2 id="formTitle">Novo pitanje</h2>
-        <input id="text" placeholder="Tekst pitanja">
-        <input class="opt" placeholder="Odgovor A">
-        <input class="opt" placeholder="Odgovor B">
-        <input class="opt" placeholder="Odgovor C">
-        <input class="opt" placeholder="Odgovor D">
-        <select id="correct">
-          <option value="0">Tačan je odgovor A</option>
-          <option value="1">Tačan je odgovor B</option>
-          <option value="2">Tačan je odgovor C</option>
-          <option value="3">Tačan je odgovor D</option>
-        </select>
-        <input id="category" placeholder="Kategorija">
-        <select id="difficulty">
-          <option value="1">Težina 1 (laka)</option>
-          <option value="2">Težina 2 (srednja)</option>
-          <option value="3">Težina 3 (teška)</option>
-        </select>
-        <button id="save" class="primary">Sačuvaj</button>
-        <button id="del" class="hidden">Obriši</button>
-        <button id="clear">Novo pitanje</button>
-        <p id="msg"></p>
-      </section>
 
-      <section class="card">
-        <h2>Pitanja</h2>
-        <select id="filter">
-          <option value="1">Laka</option>
-          <option value="2">Srednja</option>
-          <option value="3">Teška</option>
-        </select>
-        <div id="list"></div>
-      </section>
-    </div>
-  </main>
-  <script src="js/admin.js"></script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Administracija pitanja</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="app">
+        <h1>Administracija pitanja</h1>
+            <p class="muted"><a href="index.html">← Nazad na kviz</a></p>
+        <div class="start-grid">
+            <section class="card">
+                <h2 id="formTitle">Novo pitanje</h2>
+                <input id="text" placeholder="Tekst pitanja">
+                <input class="opt" placeholder="Odgovor A">
+                <input class="opt" placeholder="Odgovor B">
+                <input class="opt" placeholder="Odgovor C">
+                <input class="opt" placeholder="Odgovor D">
+                <select id="correct">
+                    <option value="0">Tačan je odgovor A</option>
+                    <option value="1">Tačan je odgovor B</option>
+                    <option value="2">Tačan je odgovor C</option>
+                    <option value="3">Tačan je odgovor D</option>
+                </select>
+                <select id="category">
+                    <option>programiranje</option>
+                    <option>baze</option>
+                    <option>glavni gradovi</option>
+                    <option>istorija</option>
+                    <option>nauka</option>
+                    <option>opšta kultura</option>
+                </select>
+                <select id="difficulty">
+                    <option value="1">Težina 1 (laka)</option>
+                    <option value="2">Težina 2 (srednja)</option>
+                    <option value="3">Težina 3 (teška)</option>
+                </select>
+                <button id="save" class="primary">Sačuvaj</button>
+                <button id="del" class="hidden">Obriši</button>
+                <button id="clear">Novo pitanje</button>
+                <p id="msg"></p>
+            </section>
+
+            <section class="card">
+                <h2>Pitanja</h2>
+                <select id="filter">
+                    <option value="1">Laka</option>
+                    <option value="2">Srednja</option>
+                    <option value="3">Teška</option>
+                </select>
+                <div id="list"></div>
+            </section>
+        </div>
+    </main>
+    <script src="js/admin.js"></script>
 </body>
+
 </html>
